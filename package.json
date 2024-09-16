@@ -6,14 +6,38 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "electron": "electron .",
+    "electron-build": "electron-builder",
+    "dev:electron": "concurrently \"npm run dev\" \"npm run electron\""
+  },
+  "build": {
+    "appId": "com.example.my-electron-app",
+    "files": [
+      "main.js",
+      "package.json",
+      "next.config.js",
+      "public/**/*",
+      "pages/**/*",
+      "components/**/*",
+      "app/**/*"
+    ],
+    "directories": {
+      "output": "build"
+    }
   },
   "dependencies": {
+    "axios": "^1.7.5",
+    "framer-motion": "^11.3.31",
+    "next": "14.2.7",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.7"
+    "react-dom": "^18"
   },
+  "main": "main.js",
   "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^32.0.1",
+    "electron-builder": "^24.13.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.1"
   }

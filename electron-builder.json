@@ -1,0 +1,14 @@
+{
+  "appId": "com.example.my-next-electron-app",
+  "files": [
+    "main.js",
+    "package.json",
+    "next.config.js",
+    "public/**/*",
+    "pages/**/*",
+    "components/**/*"
+  ],
+  "directories": {
+    "output": "build"
+  }
+}
